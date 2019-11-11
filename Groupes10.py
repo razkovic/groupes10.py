@@ -30,7 +30,7 @@ print(" Prénom du client: "+c1.prénom)
 print(" Âge du client: {}".format(c1.âge)+" ans")#limite de la concaténation car pas possible entre string et int passsons aux textes préformaté
 print(" Adresse du client: "+c1.adresse)     
 
-def ajouteCompte(self,compte):
+def ajouteCompte(self, compte):
     self.__mesComptes.opend(compte)
     compte.assigneTitulaire(self)
     
@@ -52,8 +52,7 @@ def depose(self):
     print ("quel montant ?")
     x=int(input("?"))
     c.depose(x)
-
-﻿#fait par ALBERT WEFE 18A179FS
+#Abdoulrazak Haman 18A050FS
 from Agent import Agent
 from Agent import Agent
 class Guichetier(Agent):
@@ -99,28 +98,44 @@ class Guichetier(Agent):
   def consultesolde (self):
 	"""Retourne le solde."""
       return self.solde
+ 
 
   def retire (self,montant):
 	"""retire le compte de la valeur montant. Retourne le solde."""
-     if self.solde ˂= self.montant:
-          print ("impossible de ce faire retraire")
+   print (input"veuillez entrer numéro compte")
+montant=input"veillez entrer montant"
+def debit (self, somme):
+débit= 4*montant/100
+self.solde-=débit
+Return self.solde
+self.montant= montant+debit
+
+if self.solde <self.montant:
+          print ("impossible de faire ce retrait")
       else:
         self.solde-=self.montant
       return self.solde
   def versement (self, montant):
 	"""versement le compte de la valeur montant. Retourne le solde."""
+print(input"veillez entrer votre numéro compte")
+montant=input"entrez le montant"
      self.solde+=montant
      print("Nouveau solde : {:+.2f} €".format(self.solde))
      return self.solde
 
   def virement (self,comptc):
 	"""le virement le compte de la valeur montant."""
-    self.retire(self,montant)
-    comptc.versement(self,montant)
+print(input"veillez entrer votre numéro compte")
+print(input"entrez le montant")
+print(input"entrez numéro du bénéficiaire")
+montant1= retrait()
+self.solde= versement(self, montant1)
 
   def operation(self):
-      self.versement(self,montant)
-      self.retire(self,montant)
+  self.retire(self, montant)
+  self.versement(self,montant)
+      
+
 
 class controleur(Agent):
 	def __init__(self, nom, prenom ,solde,montant):
